@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Вариант 12</title>
+<meta name="description" content="Trekking — outdoor clothing and equipment store. Jackets, pants, t-shirts, backpacks and trekking shoes for men and women.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- <link rel="stylesheet" href="css/style.css"> -->
+<link rel="stylesheet/less" href="less/style.less">
+<script src="https://cdn.jsdelivr.net/npm/less" ></script>
+<!-- <script src="cdnjs.cloudflare.com/ajax/libs/less.js/2.3.1/less.min.js"> </script> -->
+</head>
+<body>
+
+<header class="site-header">
+  <a class="site-header__logo" href="#home" aria-label="Trekking — на главную">
+    <img src="assets/logo-boot.png" alt="" width="53" height="40">
+  </a>
+
+  <input type="checkbox" id="nav-toggle" class="nav-toggle" aria-label="Открыть меню">
+  <label for="nav-toggle" class="nav-burger">
+    <span></span><span></span><span></span>
+  </label>
+
+  <nav class="site-nav" aria-label="Основная навигация">
+    <a class="site-nav__link is-active" href="#home">Home</a>
+    <a class="site-nav__link" href="#products">Products</a>
+    <a class="site-nav__cart" href="#cart" aria-label="Корзина">
+      <img src="assets/icon-cart.png" alt="" width="24" height="20">
+    </a>
+  </nav>
+</header>
+
+<main>
+
+  <section class="hero" id="home">
+    <div class="hero__content">
+      <h1 class="hero__title">Our clothing , your comfort</h1>
+      <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    </div>
+    <a class="hero__scroll" href="#filters" aria-label="Прокрутить к товарам">
+      <img src="assets/icon-chevron-down.png" alt="" width="34" height="22">
+    </a>
+  </section>
+
+  <section class="filters" id="filters">
+    <h2 class="sr-only">Фильтр товаров</h2>
+    <div class="filters__inner">
+      <div class="filters__options">
+        <label class="filters__option">
+          <input type="checkbox" checked>
+          Men
+        </label>
+        <label class="filters__option">
+          <input type="checkbox" checked>
+          Women
+        </label>
+        <label class="filters__option">
+          <input type="checkbox">
+          Children
+        </label>
+      </div>
+      <a class="btn btn--tan" href="#products">See all products</a>
+    </div>
+  </section>
+
+  <section class="products" id="products" aria-labelledby="men-heading">
+    <div class="products__header">
+      <h2 class="products__title" id="men-heading">Men</h2>
+      <div class="products__rule" aria-hidden="true"></div>
+      <div class="products__pager">
+        <span class="products__count">1 / 5</span>
+        <div class="products__arrows">
+          <button type="button" aria-label="Предыдущие товары">
+            <img src="assets/icon-chevron-left.png" alt="" width="11" height="12">
+          </button>
+          <button type="button" aria-label="Следующие товары">
+            <img src="assets/icon-chevron-right.png" alt="" width="11" height="12">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products__grid">
+      <article class="product-card product-card--featured">
+        <div class="product-card__top">
+          <button type="button" class="product-card__size">
+            Size
+            <img src="assets/icon-angle-down.png" alt="" width="12" height="8">
+          </button>
+          <div class="product-card__swatches">
+            <span class="product-card__swatch product-card__swatch--navy" role="img" aria-label="Синий цвет"></span>
+            <span class="product-card__swatch product-card__swatch--yellow" role="img" aria-label="Жёлтый цвет"></span>
+            <span class="product-card__swatch product-card__swatch--charcoal" role="img" aria-label="Тёмно-серый цвет"></span>
+          </div>
+        </div>
+        <div class="product-card__image">
+          <img src="assets/tshirt-men.png" alt="Мужская футболка Trekking, тёмно-серая" loading="lazy" width="146" height="189">
+        </div>
+        <div class="product-card__footer">
+          <h3 class="product-card__name">T-shirt</h3>
+          <span class="product-card__price">5,00€</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__top">
+          <button type="button" class="product-card__size">
+            Size
+            <img src="assets/icon-angle-down.png" alt="" width="12" height="8">
+          </button>
+        </div>
+        <div class="product-card__image">
+          <img src="assets/pants-men.png" alt="Мужские треккинговые брюки Forclaz, бежевые" loading="lazy" width="116" height="232">
+        </div>
+        <div class="product-card__footer">
+          <h3 class="product-card__name">Pants Forclaz</h3>
+          <span class="product-card__price">30,00€</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__top">
+          <span class="product-card__badge">10 litri</span>
+        </div>
+        <div class="product-card__image">
+          <img src="assets/backpack-men.png" alt="Туристический рюкзак Salomon, 10 литров" loading="lazy" width="143" height="211">
+        </div>
+        <div class="product-card__footer">
+          <h3 class="product-card__name">Backpack</h3>
+          <span class="product-card__price">60,00€</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="products products--alt" aria-labelledby="women-heading">
+    <div class="products__header">
+      <h2 class="products__title" id="women-heading">Women</h2>
+      <div class="products__rule" aria-hidden="true"></div>
+      <div class="products__pager">
+        <span class="products__count">1 / 5</span>
+        <div class="products__arrows">
+          <button type="button" aria-label="Предыдущие товары">
+            <img src="assets/icon-chevron-left.png" alt="" width="11" height="12">
+          </button>
+          <button type="button" aria-label="Следующие товары">
+            <img src="assets/icon-chevron-right.png" alt="" width="11" height="12">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="products__grid">
+      <article class="product-card">
+        <div class="product-card__top">
+          <button type="button" class="product-card__size">
+            Size
+            <img src="assets/icon-angle-down.png" alt="" width="12" height="8">
+          </button>
+        </div>
+        <div class="product-card__image">
+          <img src="assets/jacket-women.png" alt="Женская пуховая куртка, бирюзовая" loading="lazy" width="197" height="216">
+        </div>
+        <div class="product-card__footer">
+          <h3 class="product-card__name">Giacket</h3>
+          <span class="product-card__price">60,00€</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__top">
+          <button type="button" class="product-card__size">
+            Size
+            <img src="assets/icon-angle-down.png" alt="" width="12" height="8">
+          </button>
+        </div>
+        <div class="product-card__image">
+          <img src="assets/shoes-women.png" alt="Женские треккинговые ботинки" loading="lazy" width="174" height="135">
+        </div>
+        <div class="product-card__footer">
+          <h3 class="product-card__name">Trekking shoes</h3>
+          <span class="product-card__price">80,00€</span>
+        </div>
+      </article>
+
+      <article class="product-card">
+        <div class="product-card__top">
+          <button type="button" class="product-card__size">
+            Size
+            <img src="assets/icon-angle-down.png" alt="" width="12" height="8">
+          </button>
+          <div class="product-card__swatches">
+            <span class="product-card__swatch product-card__swatch--pink" role="img" aria-label="Розовый цвет"></span>
+            <span class="product-card__swatch product-card__swatch--white" role="img" aria-label="Белый цвет"></span>
+          </div>
+        </div>
+        <div class="product-card__image">
+          <img src="assets/tshirt-women.png" alt="Женская футболка, тёмно-синяя" loading="lazy" width="175" height="227">
+        </div>
+        <div class="product-card__footer">
+          <h3 class="product-card__name">T-shirt</h3>
+          <span class="product-card__price">20,00€</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="about__inner">
+      <h2 class="about__title" id="about-heading">About us</h2>
+      <div class="about__box">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</p>
+      </div>
+    </div>
+  </section>
+
+  <aside class="quote-bar">
+    <div class="quote-bar__inner">
+      <img src="assets/icon-twitter.png" alt="" width="29" height="24">
+      <p>“ E-commerce psd theme available ”</p>
+    </div>
+  </aside>
+
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__brand">
+      <h2>Trekking</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div>
+    <div class="site-footer__aside">
+      <nav class="site-footer__links" aria-label="Дополнительная навигация">
+        <a href="#credits">Credits</a><span>|</span>
+        <a href="#privacy">Privacy</a><span>|</span>
+        <a href="#about">About</a><span>|</span>
+        <a href="#contact">Contact</a>
+      </nav>
+      <p class="site-footer__credit">Design by gianluca cosetta</p>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
